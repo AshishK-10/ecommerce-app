@@ -1,6 +1,7 @@
 class AdminController < ApplicationController
     before_action :authenticate_admin!
     helper_method :navs_names
+    layout 'admin'
     def index
         puts current_admin.inspect
     end
@@ -24,7 +25,7 @@ class AdminController < ApplicationController
             {
             name: "Categories",
             icon: "list",
-            path: admin_path
+            path: admin_categories_path
             },
 
             {

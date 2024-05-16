@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     root to: "admin#index", as: :admin_root
   end
 
+  namespace :admin do
+    resources :categories
+  end
+
   get '/admin', to: 'admin#index'
 end
