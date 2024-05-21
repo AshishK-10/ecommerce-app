@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admins
   root "home#index"
 
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :categories
+    resources :products do
+      resources :stocks, shallow: true
+    end
   end
 
   get '/admin', to: 'admin#index'

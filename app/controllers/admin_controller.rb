@@ -17,9 +17,9 @@ class AdminController < ApplicationController
             },
 
             {
-            name: "Product",
+            name: "Products",
             icon: "cart-shopping",
-            path: admin_path
+            path: admin_products_path
             },
 
             {
