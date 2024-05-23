@@ -31,7 +31,7 @@ class AdminController < ApplicationController
             {
             name: "Orders",
             icon: "truck-fast",
-            path: admin_path
+            path: admin_orders_path
             },
         ]
     end
