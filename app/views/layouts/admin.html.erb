@@ -24,8 +24,8 @@
             <li>
 
               <% navs_names.each do |x| %>
-                <%= link_to x[:path], class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
-                  <%= icon('fa-solid', x[:icon]) %> <span class="hidden md:inline-block"> <%= x[:name]%> </span>
+                <%= link_to x[:path], data: x[:data].present? ? x[:data] : {}, class: "block px-4 py-2 hover:rounded hover:bg-gray-700" do %>
+                  <%= icon('fa-solid', x[:icon]) %> <span class="hidden md:inline-block"> <%= x[:name]%></span>
                 <% end %>
               <% end %>
 

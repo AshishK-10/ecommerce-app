@@ -33,6 +33,13 @@ class AdminController < ApplicationController
             icon: "truck-fast",
             path: admin_orders_path
             },
+
+            {
+            name: "Sign out",
+            icon: "fa-solid fa-right-from-bracket",
+            path: destroy_admin_session_path,
+            data: { "turbo-method": :delete, "turbo-confirm": "Are you sure you want to sign out?" }
+            },
         ]
     end
 end
