@@ -1,1 +1,43 @@
-<h1>admin tab </h1>
+<h1> Admin Home </h1>
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 2rem; width: 100%; align-items: center; max-width: 64rem; margin-left: auto; margin-right: auto;">
+  <h2 style="font-size: 1.5rem; color: #2d3748; font-weight: 500; margin-bottom: 1rem;">Daily Stats</h2>
+  <div style="display: flex; gap: 2.5rem; flex-direction: row; justify-content: space-between; width: 100%; @media (min-width: 768px) { flex-direction: row; }">
+
+    <div style="max-width: 10rem; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); background: linear-gradient(to right, #2d3748, #6b7280);">
+      <div style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+        <div style="font-weight: bold; font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Revenue</div>
+        <p style="color: white; font-size: 1rem;">
+          &#X20B9; <%= @quick_stats[:revenue] ? (@quick_stats[:revenue]).to_f : "0"%>
+        </p>
+      </div>
+    </div>
+
+    <div style="max-width: 10rem; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); background: linear-gradient(to right, #2d3748, #6b7280);">
+      <div style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+        <div style="font-weight: bold; font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Total Sales</div>
+        <p style="color: white; font-size: 1rem;">
+          <%= @quick_stats[:sales] ? (@quick_stats[:sales]) : "0"%>
+        </p>
+      </div>
+    </div>
+
+    <div style="max-width: 10rem; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); background: linear-gradient(to right, #2d3748, #6b7280);">
+      <div style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+        <div style="font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem; color: white;">Average Sale</div>
+        <p style="color: white; font-size: 1rem;">
+          &#X20B9; <%= @quick_stats[:avg_sale] ? (@quick_stats[:avg_sale]).to_f : "0"%>
+        </p>
+      </div>
+    </div>
+
+    <div style="max-width: 10rem; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); background: linear-gradient(to right, #2d3748, #6b7280);">
+      <div style="padding-left: 1.5rem; padding-right: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+        <div style="font-weight: bold; font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Items/Sale</div>
+        <p style="color: white; font-size: 1rem;">
+          <%= @quick_stats[:avg_sale] ? (@quick_stats[:avg_sale]).to_f : "0"%>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
